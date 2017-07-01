@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "ClangSharpPInvokeGenerator": {
+      "commandName": "Project",
+      "commandLineArgs": " --m clang --p clang_ --namespace ClangSharp --output Generated.cs --libraryPath libclang --include include --file include/clang-c/Index.h --file include/clang-c/CXString.h --file include/clang-c/Documentation.h --file include/clang-c/CXErrorCode.h",
+      "workingDirectory": "../"
+    }
+  }
+}

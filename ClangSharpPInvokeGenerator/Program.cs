@@ -121,7 +121,7 @@
                 translationUnits.Add(translationUnit);
             }
 
-            using (var sw = new StreamWriter(outputFile))
+            using (var sw = new StreamWriter(File.OpenWrite(outputFile)))
             {
                 sw.WriteLine("namespace " + @namespace);
                 sw.WriteLine("{");

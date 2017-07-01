@@ -1,11 +1,14 @@
-﻿namespace ClangSharp
+﻿using System;
+using System.Text;
+
+namespace ClangSharp
 {
     public partial struct CXString
     {
         public override string ToString()
         {
             string retval = clang.getCString(this);
-            clang.disposeString(this);
+            //clang.disposeString(this);
             return retval;
         }
     }
@@ -22,7 +25,8 @@
     {
         public override string ToString()
         {
-            return clang.getCursorSpelling(this).ToString();
+            var str = clang.getCursorSpelling(this);
+			return str.ToString();
         }
     }
 
